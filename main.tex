@@ -1,0 +1,89 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+\usepackage[utf8]{inputenc}
+\usepackage{pgfplots}
+
+\moderncvstyle{banking}                            
+\moderncvcolor{blue}                               
+
+\usepackage[scale=0.75]{geometry}
+
+\name{Your}{Name}
+\title{Your Job Title}
+\address{Your Address}{City, State, Zip}
+\phone[mobile]{Your Phone Number}                   
+\email{Your Email}                                 
+
+\begin{document}
+
+\makecvtitle
+
+\section{Objective}
+A brief statement about your career goals.
+
+\section{Education}
+\cventry{Year--Year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
+\subsection{Semester Scores}
+\cvitem{Semester 1}{Score}
+\cvitem{Semester 2}{Score}
+\cvitem{Semester 3}{Score}
+\cvitem{Semester 4}{Score}
+\cvitem{Semester 5}{Score}
+\cvitem{Semester 6}{Score}
+\cvitem{Semester 7}{Score}
+\cvitem{Semester 8}{Score}
+
+\section{Skills}
+\cvitem{Skill 1}{Description}
+\cvitem{Skill 2}{Description}
+\cvitem{Skill 3}{Description}
+
+\section{Experience}
+\cventry{Year--Year}{Job Title}{Company}{City}{}{General description no longer than 1--2 lines.\newline{}%
+Detailed achievements:%
+\begin{itemize}%
+\item Achievement 1;
+\item Achievement 2, with sub-achievements:
+  \begin{itemize}%
+  \item Sub-achievement (a);
+  \item Sub-achievement (b), with sub-sub-achievements (don't do this!);
+    \begin{itemize}
+    \item Sub-sub-achievement i;
+    \item Sub-sub-achievement ii;
+    \item Sub-sub-achievement iii;
+    \end{itemize}
+  \item Sub-achievement (c);
+  \end{itemize}
+\item Achievement 3.
+\end{itemize}}
+
+\section{Projects}
+\cvitem{Project 1}{Brief description}
+\cvitem{Project 2}{Brief description}
+
+\section{Graph of Semester Scores}
+\begin{tikzpicture}
+\begin{axis}[
+    title={Semester Scores},
+    xlabel={Semester},
+    ylabel={Score},
+    xmin=1, xmax=8,
+    ymin=0, ymax=100,
+    xtick=data,
+    ytick={0,20,40,60,80,100},
+    legend pos=north west,
+    ymajorgrids=true,
+    grid style=dashed,
+]
+ 
+\addplot[
+    color=blue,
+    mark=square,
+]
+coordinates {
+    (1,Score1)(2,Score2)(3,Score3)(4,Score4)(5,Score5)(6,Score6)(7,Score7)(8,Score8)
+};
+ 
+\end{axis}
+\end{tikzpicture}
+
+\end{document}
