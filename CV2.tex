@@ -1,0 +1,87 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+% Define colors
+\definecolor{myblue}{RGB}{0,71,171}
+
+% Set up hyperref
+\hypersetup{
+  colorlinks=true,
+  linkcolor=myblue,
+  urlcolor=myblue
+}
+
+% Define section heading format
+\newcommand{\sectionheading}[1]{\vspace{8pt}\noindent\textbf{\textcolor{myblue}{\large #1}}}
+
+% Define itemize format
+\setlist[itemize]{label=$\cdot$, leftmargin=16pt, itemsep=4pt}
+
+% Define entry command for work and education experiences
+\newcommand{\entry}[4]{
+  \noindent \textbf{#1} \hfill #2 \\
+  \textit{#3} \hfill \textit{#4} \\
+  \vspace{4pt}
+}
+
+\begin{document}
+
+\begin{center}
+  \textbf{\LARGE Your Name} \\
+  \vspace{4pt}
+  Your Profession \\
+  \vspace{8pt}
+  \url{www.yourwebsite.com} $\vert$ your.email@example.com $\vert$ (123) 456-7890
+\end{center}
+
+\sectionheading{Summary}
+Your summary goes here. Briefly highlight your skills, experience, and achievements.
+
+\sectionheading{Experience}
+\entry{Company A}{City, Country}{Position}{Dates}
+Description of your responsibilities and accomplishments at Company A.
+
+\entry{Company B}{City, Country}{Position}{Dates}
+Description of your responsibilities and accomplishments at Company B.
+
+\sectionheading{Education}
+\entry{University A}{City, Country}{Degree}{Dates}
+Description of your studies and any notable achievements at University A.
+
+\entry{University B}{City, Country}{Degree}{Dates}
+Description of your studies and any notable achievements at University B.
+
+\sectionheading{Skills}
+\begin{itemize}
+  \item Skill 1
+  \item Skill 2
+  \item Skill 3
+\end{itemize}
+
+\sectionheading{Projects}
+\entry{Project A}{Description}{Technologies}{Dates}
+Brief overview of your project A and the technologies used.
+
+\entry{Project B}{Description}{Technologies}{Dates}
+Brief overview of your project B and the technologies used.
+
+\sectionheading{Certifications}
+\entry{Certification A}{Certifying Organization}{Dates}{Credential ID}
+Description of your certification A and any relevant details.
+
+\entry{Certification B}{Certifying Organization}{Dates}{Credential ID}
+Description of your certification B and any relevant details.
+
+\sectionheading{Interests}
+\begin{itemize}
+  \item Interest 1
+  \item Interest 2
+  \item Interest 3
+\end{itemize}
+
+\end{document}
