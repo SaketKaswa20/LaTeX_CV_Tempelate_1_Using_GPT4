@@ -1,0 +1,127 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tikz}
+
+% Define colors
+\definecolor{myblue}{RGB}{41, 98, 255}
+\definecolor{mygray}{RGB}{128, 128, 128}
+
+% Set up hyperref
+\hypersetup{
+  colorlinks=true,
+  linkcolor=myblue,
+  urlcolor=myblue
+}
+
+% Define section heading format
+\newcommand{\sectionheading}[1]{\vspace{8pt}\noindent\textbf{\textcolor{myblue}{\large #1}}}
+
+% Define itemize format
+\setlist[itemize]{label=$\cdot$, leftmargin=16pt, itemsep=4pt}
+
+% Define entry command for work and education experiences
+\newcommand{\entry}[4]{
+  \noindent \textbf{#1} \hfill #2 \\
+  \textit{#3} \hfill \textit{#4} \\
+  \vspace{4pt}
+}
+
+% Define command for skill level bars
+\newcommand{\skills}[2]{%
+  \begin{tikzpicture}
+    \fill[myblue, myblue] (0,0) rectangle (#2,0.4);
+    \fill[white, myblue] (#2,0) rectangle (5,0.4);
+    \draw (0,0) rectangle (5,0.4);
+    \node[anchor=west] at (5.2,0.2) {#1};
+  \end{tikzpicture}%
+}
+
+\begin{document}
+
+\begin{center}
+  \textbf{\LARGE \textcolor{myblue}{Your Name}} \\
+  \vspace{4pt}
+  \textcolor{mygray}{\textit{Your Profession}} \\
+  \vspace{8pt}
+  \url{www.yourwebsite.com} $\vert$ your.email@example.com $\vert$ (123) 456-7890
+\end{center}
+
+\vspace{8pt}
+
+\sectionheading{\textcolor{myblue}{Summary}}
+Your summary goes here. Briefly highlight your skills, experience, and achievements.
+
+\vspace{8pt}
+
+\sectionheading{\textcolor{myblue}{Experience}}
+\newline
+\entry{Company A}{City, Country}{Position}{Dates}
+Description of your responsibilities and accomplishments at Company A.
+
+\entry{Company B}{City, Country}{Position}{Dates}
+Description of your responsibilities and accomplishments at Company B.
+
+\vspace{8pt}
+
+\sectionheading{\textcolor{myblue}{Education}}
+\newline
+\entry{University A}{City, Country}{Degree}{Dates}
+Description of your studies and any notable achievements at University A.
+
+\entry{University B}{City, Country}{Degree}{Dates}
+Description of your studies and any notable achievements at University B.
+
+\vspace{8pt}
+
+\sectionheading{\textcolor{myblue}{Skills}}
+\begin{itemize}
+  \item Skill 1 \skills{Intermediate}{3.5}
+  \item Skill 2 \skills{Advanced}{4.5}
+  \item Skill 3 \skills{Beginner}{2.0}
+\end{itemize}
+
+\vspace{8pt}
+
+\sectionheading{\textcolor{myblue}{Projects}}
+\newline
+\entry{Project A}{Description}{Technologies}{Dates}
+Brief overview of your project A and the technologies used.
+
+\entry{Project B}{Description}{Technologies}{Dates}
+Brief overview of your project B and the technologies used.
+
+\vspace{8pt}
+
+\sectionheading{\textcolor{myblue}{Certifications}}
+\newline
+\entry{Certification A}{Certifying Organization}{Dates}{Credential ID}
+Description of your certification A and any relevant details.
+
+\entry{Certification B}{Certifying Organization}{Dates}{Credential ID}
+Description of your certification B and any relevant details.
+
+\vspace{8pt}
+
+\sectionheading{\textcolor{myblue}{Publications}}
+\newline
+\entry{Publication A}{Journal/Conference}{Authors}{Year}
+Summary of your publication A and any key findings.
+
+\entry{Publication B}{Journal/Conference}{Authors}{Year}
+Summary of your publication B and any key findings.
+
+\vspace{8pt}
+
+\sectionheading{\textcolor{myblue}{Interests}}
+\begin{itemize}
+  \item Interest 1
+  \item Interest 2
+  \item Interest 3
+\end{itemize}
+
+\end{document}
